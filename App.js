@@ -25,17 +25,17 @@ export default function App() {
 
         
       <TouchableOpacity style={styles.button} onPress={handleDecrement}>
-          <Text style={styles.buttonText} >Diminuir</Text>
+          <Text style={styles.buttonText} >-1</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.button} onPress={handleIncrement}>
-          <Text  style={styles.buttonText}>Aumentar</Text>
+          <Text  style={styles.buttonText}>+1</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={[styles.button, styles.resetButton]} onPress={handleReset}>
-          <Text style={styles.buttonText} >Zerar</Text>
-        </TouchableOpacity>
       </View>
+        <TouchableOpacity style={[styles.zerar, styles.resetButton]} onPress={handleReset}>
+          <Text style={styles.buttonText} >zerar</Text>
+        </TouchableOpacity>
       <StatusBar style="auto" />        
     </View>
   );
@@ -44,11 +44,12 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#C68EFD',
     alignItems: 'center',
     justifyContent: 'center',
   },
   title:{
+    color:"#fff",
     fontSize:32,
     fontWeight: "bold",
     marginBottom: 20,
@@ -56,14 +57,20 @@ const styles = StyleSheet.create({
   counterText:{
     fontSize:64,
     fontWeight: "bold",
-    color: "#333",
+    color: "#fff",
     marginBottom:30
   },
   button:{
-    backgroundColor: "#007bff",
-    paddingVertical: 15,
-    paddingHorizontal: 40,
-    borderRadius: 10,
+    backgroundColor: "#69247C",
+    paddingVertical: 35,
+    paddingHorizontal: 80,
+    borderRadius: 20,
+  },
+  zerar:{
+    backgroundColor: "#6A0066",
+    paddingVertical: 50,
+    paddingHorizontal: 80,
+    borderRadius: 30,
   },
   buttonText:{
     color: "#fff",
@@ -76,8 +83,9 @@ const styles = StyleSheet.create({
     gap: 6,
   },
   resetButton:{
-    backgroundColor: "#dc3545",
+    backgroundColor: "#AA60C8",
+    
   }
-});
+})
 
 
